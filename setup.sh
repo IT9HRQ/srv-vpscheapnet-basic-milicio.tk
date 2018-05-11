@@ -1,7 +1,3 @@
 #!/bin/bash
 
-echo "Hello World!"
-
-ls
-
-date
+apt-get update
