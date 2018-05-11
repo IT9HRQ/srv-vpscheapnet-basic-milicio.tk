@@ -8,4 +8,3 @@ DIST=master
 git config credential.helper cache && git commit -am "deploy@" && git push
 
 ssh $USER@$HOST "wget --no-check-certificate -O - https://rawgit.com/$REPO/$DIST/setup.sh | bash"
-wget --no-check-certificate -O - https://rawgit.com/francescobianco/srv-vpscheapnet-basic-milicio.tk/master/setup.sh  | bash
