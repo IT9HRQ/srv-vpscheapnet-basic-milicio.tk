@@ -9,4 +9,4 @@ git config credential.helper cache && git commit -am "deploy@" && git push
 
 sleep 10
 
-ssh $USER@$HOST "wget -q --no-check-certificate -O - https://rawgit.com/$REPO/$DIST/setup.sh | bash"
+ssh $USER@$HOST "wget -q --no-cache --no-check-certificate -O - https://rawgit.com/$REPO/$DIST/setup.sh | bash"
