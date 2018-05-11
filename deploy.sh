@@ -7,4 +7,4 @@ DIST=master
 
 git config credential.helper cache && git commit -am "deploy@" && git push
 
-ssh $USER@$HOST "wget --no-check-certificate -O - https://rawgit.com/$REPO/$DIST/setup.sh | bash"
+ssh $USER@$HOST "wget --no-check-certificate -O - https://rawgit.com/$REPO/$DIST/setup.sh"
