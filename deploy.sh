@@ -1,14 +1,10 @@
 #!/bin/bash
 
-SERVER_USER=root
-SERVER_HOST=srv-vpscheapnet-basic-milicio.tk
-SERVER_BRANCH=master
-SERVER_REPOSITORY=javanile/node
+USER=root
+HOST=srv-vpscheapnet-basic-milicio.tk
+REPO=francescobianco/srv-vpscheapnet-basic-milicio.tk
+DIST=master
 
 git config credential.helper cache && git commit -am "deploy@" && git push
 
-ssh $SERVER_USER@$SERVER_HOST "wget --no-check-certificate \
-    -O - https://rawgit.com/$SERVER_REPOSITORY/$SERVER_BRANCH/setup.sh | bash"
-
-
-
+ssh $USER@$HOST "wget --no-check-certificate -O - https://rawgit.com/$REPO/$DIST/setup.sh | bash"
